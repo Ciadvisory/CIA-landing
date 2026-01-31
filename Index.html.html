@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIA - Contractor Intelligence Advisory | Hire with Confidence</title>
+    <meta name="description" content="Intelligence-grade contractor analysis for bathroom remodeling. Get verified warranty data, cost analysis, and reliability scores. $39 per contractor.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@400;600;700&display=swap');
+        
+        :root {
+            --forest-green: #1a4d2e;
+            --deep-forest: #0d2818;
+            --gold: #d4af37;
+            --light-gold: #f0e6c4;
+            --cream: #faf8f3;
+            --dark-text: #2d2d2d;
+            --medium-green: #2d5016;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Source Sans 3', sans-serif;
+            color: var(--dark-text);
+            background: var(--cream);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--deep-forest) 0%, var(--forest-green) 100%);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .logo-shield {
+            width: 60px;
+            height: 70px;
+            background: var(--gold);
+            clip-path: polygon(50% 0%, 100% 15%, 100% 75%, 50% 100%, 0% 75%, 0% 15%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: 1.5rem;
+            color: var(--deep-forest);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+        
+        .logo-text {
+            color: white;
+        }
+        
+        .logo-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0;
+        }
+        
+        .logo-text p {
+            font-size: 0.75rem;
+            color: var(--gold);
+            margin: 0;
+            letter-spacing: 2px;
+        }
+        
+        .cta-button {
+            background: var(--gold);
+            color: var(--deep-forest);
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        
+        .cta-button:hover {
+            background: var(--light-gold);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--forest-green) 0%, var(--medium-green) 100%);
+            color: white;
+            padding: 5rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 10px,
+                    rgba(255,255,255,0.02) 10px,
+                    rgba(255,255,255,0.02) 20px
+                );
+            pointer-events: none;
+        }
+        
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero-highlight {
+            color: var(--gold);
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            max-width: 700px;
+        }
+        
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--gold);
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        /* Problem Section */
+        .problem {
+            padding: 5rem 2rem;
+            background: white;
+        }
+        
+        .problem-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--forest-green);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .problem-card {
+            background: var(--cream);
+            padding: 2rem;
+            border-left: 4px solid var(--gold);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .problem-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .problem-card h3 {
+            color: var(--forest-green);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+        
+        /* Solution Section */
+        .solution {
+            padding: 5rem 2rem;
+            background: linear-gradient(to bottom, var(--cream), white);
+        }
+        
+        .solution-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .comparison-table {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            margin: 3rem 0;
+        }
+        
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .comparison-table th {
+            background: var(--forest-green);
+            color: white;
+            padding: 1.5rem 1rem;
+            text-align: left;
+            font-weight: 700;
+        }
+        
+        .comparison-table td {
+            padding: 1.25rem 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background: var(--cream);
+        }
+        
+        .check {
+            color: var(--gold);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .cross {
+            color: #999;
+            font-size: 1.2rem;
+        }
+        
+        /* Features */
+        .features {
+            padding: 5rem 2rem;
+            background: white;
+        }
+        
+        .features-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .feature-card {
+            background: var(--cream);
+            padding: 2.5rem;
+            border-top: 3px solid var(--gold);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        
+        .feature-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--gold);
+            font-weight: 900;
+            opacity: 0.3;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+        
+        .feature-card h3 {
+            color: var(--forest-green);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        /* Pricing */
+        .pricing {
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, var(--forest-green), var(--medium-green));
+            color: white;
+        }
+        
+        .pricing-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .pricing-box {
+            background: white;
+            color: var(--dark-text);
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            margin-top: 2rem;
+        }
+        
+        .price {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            color: var(--forest-green);
+            font-weight: 900;
+        }
+        
+        .price-sub {
+            color: var(--gold);
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .pricing-features {
+            text-align: left;
+            margin: 2rem 0;
+        }
+        
+        .pricing-features li {
+            margin: 1rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+        
+        .pricing-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+        
+        /* Contact Form */
+        .contact {
+            padding: 5rem 2rem;
+            background: white;
+        }
+        
+        .contact-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--forest-green);
+            font-weight: 600;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+        
+        .submit-button {
+            background: var(--forest-green);
+            color: white;
+            padding: 1rem 3rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-button:hover {
+            background: var(--deep-forest);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--deep-forest);
+            color: white;
+            padding: 3rem 2rem 1rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .disclaimer {
+            font-size: 0.85rem;
+            opacity: 0.7;
+            margin-top: 2rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .hero-stats {
+                gap: 2rem;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .comparison-table {
+                overflow-x: auto;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="logo-shield">CIA</div>
+                <div class="logo-text">
+                    <h1>C.I. ADVISORY</h1>
+                    <p>INTELLIGENCE • INSIGHT • CONFIDENCE</p>
+                </div>
+            </div>
+            <a href="#contact" class="cta-button">Request Analysis</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Hire Contractors with <span class="hero-highlight">Confidence</span><br>Not Crossed Fingers</h2>
+            <p>Intelligence-grade contractor analysis. Verified warranties. Real customer data. Professional decision-support.</p>
+            <a href="#contact" class="cta-button" style="display: inline-block; margin-top: 1rem;">Get Your Analysis</a>
+            
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">10</span>
+                    <span class="stat-label">Performance Metrics</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">$39</span>
+                    <span class="stat-label">Per Contractor</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">24-48h</span>
+                    <span class="stat-label">Delivery Time</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem">
+        <div class="problem-content">
+            <h2 class="section-title">The Homeowner's Dilemma</h2>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem;">Choosing the wrong contractor costs you $10,000 to $50,000 in bad work, delays, and heartbreak.</p>
+            
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">🤔</div>
+                    <h3>Information Overload</h3>
+                    <p>Scattered reviews, marketing claims, and gut feelings. Who do you trust?</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">⏰</div>
+                    <h3>Time Consuming</h3>
+                    <p>10+ hours researching contractors, reading reviews, checking references.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">⚠️</div>
+                    <h3>High Stakes</h3>
+                    <p>Your largest financial investment. One bad decision = years of regret.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution">
+        <div class="solution-content">
+            <h2 class="section-title">Why C.I. Advisory vs. Reviews?</h2>
+            <p style="text-align: center; font-size: 1.1rem; max-width: 700px; margin: 0 auto 2rem;">Angie's List is the crowd. C.I. Advisory is the analyst.</p>
+            
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Review Sites</th>
+                            <th>C.I. Advisory</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Structured Analysis</strong></td>
+                            <td><span class="cross">✗</span> You read reviews</td>
+                            <td><span class="check">✓</span> 10 metrics scored</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Warranty Verification</strong></td>
+                            <td><span class="cross">✗</span> Depends on reviews</td>
+                            <td><span class="check">✓</span> Direct verification</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cost Analysis</strong></td>
+                            <td><span class="cross">✗</span> Price ranges only</td>
+                            <td><span class="check">✓</span> Transparency + value scoring</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Side-by-Side Comparison</strong></td>
+                            <td><span class="cross">✗</span> Manual work for you</td>
+                            <td><span class="check">✓</span> Built-in comparison</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Risk Assessment</strong></td>
+                            <td><span class="cross">✗</span> Figure it out yourself</td>
+                            <td><span class="check">✓</span> Documented gaps/risks</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Methodology Transparency</strong></td>
+                            <td><span class="cross">✗</span> Black box algorithm</td>
+                            <td><span class="check">✓</span> Open rubrics & sources</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="features-content">
+            <h2 class="section-title">What You Get</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-number">01</div>
+                    <h3>10-Metric Analysis</h3>
+                    <p>Installation speed, warranty quality, company stability, pricing transparency, and 6 more critical metrics.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-number">02</div>
+                    <h3>Warranty Verification</h3>
+                    <p>We call contractors directly to verify coverage, transferability, and what's actually included.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-number">03</div>
+                    <h3>Cost Effectiveness</h3>
+                    <p>True value analysis—not just price. Hidden cost risk assessment and transparency scoring.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-number">04</div>
+                    <h3>Side-by-Side Comparison</h3>
+                    <p>See how contractors stack up on the metrics that matter most to your decision.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-number">05</div>
+                    <h3>Professional PDF Reports</h3>
+                    <p>Downloadable reports you can reference, share with family, and keep for your records.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-number">06</div>
+                    <h3>Risk Assessment</h3>
+                    <p>We document gaps and limitations for each contractor so you know what you're getting into.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing">
+        <div class="pricing-content">
+            <h2 class="section-title" style="color: white;">Simple, Transparent Pricing</h2>
+            
+            <div class="pricing-box">
+                <div class="price">$39</div>
+                <div class="price-sub">per contractor analysis</div>
+                
+                <ul class="pricing-features">
+                    <li>Complete 10-metric performance analysis</li>
+                    <li>Warranty verification with direct contractor contact</li>
+                    <li>Cost effectiveness scoring and transparency rating</li>
+                    <li>Customer satisfaction analysis from multiple sources</li>
+                    <li>Side-by-side comparison with other contractors</li>
+                    <li>Professional PDF report delivered in 24-48 hours</li>
+                    <li>Risk assessment and red flags documented</li>
+                    <li>All data sources cited and methodology transparent</li>
+                </ul>
+                
+                <p style="margin-top: 2rem; color: var(--medium-green); font-style: italic;">That's less than one hour of a plumber's time—and worth infinitely more than a $20,000 mistake.</p>
+                
+                <a href="#contact" class="cta-button" style="display: inline-block; margin-top: 2rem; padding: 1rem 3rem;">Request Your Analysis</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact" id="contact">
+        <div class="contact-content">
+            <h2 class="section-title">Request Your Contractor Analysis</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">Tell us which contractors you're considering and we'll deliver your intelligence report in 24-48 hours.</p>
+            
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Your Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                
+                <div class="form-group">
+                    <label for="location">Project Location (City, State) *</label>
+                    <input type="text" id="location" name="location" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="projectType">Project Type *</label>
+                    <select id="projectType" name="projectType" required>
+                        <option value="">Select...</option>
+                        <option value="bathroom">Bathroom Remodel</option>
+                        <option value="kitchen">Kitchen Remodel</option>
+                        <option value="other">Other Home Improvement</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="contractors">Contractors You're Considering *</label>
+                    <textarea id="contractors" name="contractors" rows="4" placeholder="List the contractor names or companies you'd like us to analyze..." required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Additional Details (Optional)</label>
+                    <textarea id="message" name="message" rows="3" placeholder="Any specific concerns or questions?"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-button">Submit Request</button>
+                <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem; color: #666;">We'll contact you within 24 hours to confirm your analysis request.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="logo-section" style="justify-content: center; margin-bottom: 2rem;">
+                <div class="logo-shield">CIA</div>
+                <div class="logo-text">
+                    <h1>CONTRACTOR INTELLIGENCE ADVISORY</h1>
+                    <p>PROFESSIONAL CONTRACTOR ANALYSIS</p>
+                </div>
+            </div>
+            
+            <p><strong>Contact:</strong> info@ciadvisory.com | (555) 123-4567</p>
+            <p style="margin-top: 0.5rem;">Serving Wisconsin & South Carolina</p>
+            
+            <div class="disclaimer">
+                <p><strong>Disclaimer:</strong> Contractor Intelligence Advisory provides decision-support analysis based on publicly available data. We do not endorse, certify, or guarantee contractor performance. Homeowners should verify licenses, insurance, and references independently. Scores reflect data available at time of analysis and may change. All reports are for informational purposes only.</p>
+                <p style="margin-top: 1rem;">© 2026 Contractor Intelligence Advisory. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Form submission handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // For now, show success message
+            // TODO: Integrate with actual email service (EmailJS, Formspree, etc.)
+            alert('Thank you for your request! We\'ll contact you within 24 hours to confirm your contractor analysis.\n\nRequest Details:\n' + 
+                  'Name: ' + data.name + '\n' +
+                  'Email: ' + data.email + '\n' +
+                  'Location: ' + data.location + '\n' +
+                  'Contractors: ' + data.contractors);
+            
+            // Reset form
+            this.reset();
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
